@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Your name here">
+  <meta name="description" content="Shop Small">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!--Load math.js-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.0.0/math.js"></script><!--math.js-->
+  <!--Stylesheets-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <!--Load local stylesheet-->
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="js/get_saved_shops.js"></script>
+  <!--Load local shop.js file, which was generated from TypeScript-->
+  <script type="text/javascript" src="js/shop.js"></script>
+  <!--Load local descriptions.js file-->
+  <script type="text/javascript" src="js/descriptions.js"></script>
+
+
+  <title>Small Shops</title> 
+
+  
+</head>
+<body class="container">
+  <nav class="navbar navbar-expand-lg sticky-top navbar-light" style="background-color: #e3f2fd;">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item navbar-brand">
+        <span class="navbar-brand">
+          SHOP SMALL
+        </span>
+      </li>
+      <li class="nav-item">
+        <a href="index.html" class="nav-link">
+          Home
+        </a>
+      </li>
+      <li class="nav-item active">
+        <a href="descriptions.html" class="nav-link">
+          Small Shop Search Results
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="addShops.html" class="nav-link">
+          Add a Shop
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="favorites.html" class="nav-link">
+          Favorites
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <main>
+    <h1>Small Business Search</h1>
+    <ul class="list-group list-group-horizontal-xl">
+      <ul class="list-group">
+        <li class="list-group-item">Point once and close one hand to switch tabs.</li>
+        <li class="list-group-item">Open one hand to navigate rows in the table.</li>
+        <li class="list-group-item">Open both hands to select row.</li>
+      </ul>
+      <ul class="list-group">
+        <li class="list-group-item">Close both hands to clear entry.</li>
+        <li class="list-group-item">Point once to scroll to bottom.</li>
+        <li class="list-group-item"> Point twice to scroll to top.</li>
+      </ul>
+      <ul class="list-group">
+        <li class="list-group-item">Pinch and close one hand to add shop to favorites.</li>
+        <li class="list-group-item">
+          <img src="star.png"/>
+        </li>
+        <li class="list-group-item">
+          <img src="star.png"/>
+        </li>
+      </ul>
+
+    </ul>
+    <p style="padding: 20px 0;"> 
+      What item are you interested in looking for?
+      <input id="textFilter" type="text">
+    </p>
+    <p>
+      <span id="searchCount">???</span> shops contain the item '<span id="searchText">???</span>'.
+    </p>
+    <table class="table table-striped" style="background-color:#ebf5ff">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Items</th>
+          <th scope="col">Website</th>
+        </tr>
+      </thead>
+      <tbody id="shopsTable">
+      </tbody>
+    </table>
+  </main>
+
+  <div class="mb10">
+    <button id="toggleButton" class="button">Toggle Video</button>
+  </div>
+  <video class = "canvasbox" autoplay="autoplay" id = "video"></video>
+  <canvas id="canvas" class="canvasbox"> </canvas>
+
+  
+  <img src="star.png"/>
+  <h1>Favorites</h1>
+  <table class="table table-striped" style="background-color:#f8e5fd">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Items</th>
+        <th scope="col">Website</th>
+      </tr>
+    </thead>
+    <tbody id="favoriteShops">
+    </tbody>
+  </table>
+
+  <script src="https://cdn.jsdelivr.net/npm/handtrackjs@latest/dist/handtrack.min.js"> </script>
+  <script src="./js/track.js"></script>
+</body>
+</html>

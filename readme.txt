@@ -1,0 +1,1 @@
+Run `live-server` in your terminal from the root directory to view the site.
